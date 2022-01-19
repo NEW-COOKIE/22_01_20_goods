@@ -1,28 +1,32 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <Header />
+    <!-- 路由组件出口 -->
+    <router-view></router-view>
+    <!-- 设置底部组件显示与隐藏 此方法不推荐 -->
+    <!-- <Footer v-show="$route.path === '/home' || $route.path === '/search'"/> -->
+    <Footer v-show="$route.meta.isFooterShow" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// 引入组件
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Header,
+    Footer,
+  },
+
+  // 挂载完毕: 可以向服务器发送请求
+  mounted() {
+    this.$store.dispatch("getCategoryList");
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
