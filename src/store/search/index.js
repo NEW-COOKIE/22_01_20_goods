@@ -1,4 +1,5 @@
-// 引入请求接口
+/* 搜索仓库 */
+// 引入axios请求模块
 import { reqSearchList } from "@/api";
 
 // home数据管理模块

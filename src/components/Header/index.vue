@@ -10,7 +10,7 @@
             <span>请</span>
             <!-- 声明式导航 -->
             <router-link to="/login">登录</router-link>
-            <router-link to="/login">免费注册</router-link>
+            <router-link to="/register">免费注册</router-link>
           </p>
         </div>
         <div class="typeList">

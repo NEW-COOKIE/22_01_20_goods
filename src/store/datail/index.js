@@ -1,3 +1,5 @@
+/* 商品数据列表仓库 */
+// 引入axios请求模块
 import { reqGoodsInfo, reqAddOrUpDataShopCart } from "@/api";
 import { user_token } from '@/utils/uuid_token.js';
 

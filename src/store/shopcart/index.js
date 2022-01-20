@@ -1,3 +1,5 @@
+/* 购物车仓库 */
+// 引入axios请求模块
 import { reqCartList, deleteCartList, reqcheckCar } from "@/api"
 
 const actions = {

@@ -91,5 +91,25 @@ url: 'api/cart/checkCart/{skuId}/{isChecked}'
 参数: 需要
  */
 export const reqcheckCar = (skuId, isChecked) => {
-  return service({ url: `/cart/checkCart/${skuId}/${isChecked}`, method: 'get'});
+  return service({ url: `/cart/checkCart/${skuId}/${isChecked}`, method: 'get' });
+}
+
+/* 
+获取验证码
+url: 'api/user/passport/sendCode/{hone}'
+请求方式: 'get'
+参数: 需要
+ */
+export const reqGetCode = (phone) => {
+  return service({ url: `/user/passport/sendCode/${phone}`, method: 'get' });
+}
+
+/* 
+用户注册
+url: "api/user/passport/register"
+请求方式: 'post'
+参数: 需要
+ */
+export const reqRegister = (data) => {
+  return service({ url: '/user/passport/register', data, method: 'post' });
 }
